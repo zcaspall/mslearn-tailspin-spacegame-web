@@ -11,10 +11,14 @@ pool:
   demands:
   - npm
 
+variables:
+  buildConfiguration: 'Release'
+
 steps:
 - task: UseDotNet@2
   displayName: 'Use .Net SDK 5.x'
   inputs:
+    packageType: sdk
     version: '5.x'
 
 - task: Npm@1
