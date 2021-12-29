@@ -72,7 +72,7 @@ steps:
     custom: tool
     arguments: 'run reportgenerator -reports:$(Build.SourceDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage -reporttypes:HtmlInline_AzurePipeines'
 
-- task: DotNetCLI@2
+- task: DotNetCoreCLI@2
   displayName: 'Publish code coverage report'
   inputs:
     codeCoverageTool: 'cobertura'
